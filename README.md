@@ -19,9 +19,9 @@ This is a Shopping List (or to-do list), developed with the intention of practic
 ![screenshot](public/screenshot.png)
 
 ### Skills:
-- Modules export and import
+- Module export and import
 - Components
-- One way and Two way Data Binding
+- One-way and Two-way Data Binding
 - Events
 - Forms
 - Conditional Render (@if / *ngIf)
