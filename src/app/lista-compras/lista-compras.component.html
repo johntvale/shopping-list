@@ -1,0 +1,104 @@
+<div class="container">
+  <h1>Lista de compras</h1>
+  <form #form="ngForm" (ngSubmit)="adicionarProduto()">
+    <label for="valorProduto">Valor</label>
+    <label for="quantidadeProduto">Quantidade</label>
+    <div class="form-group">
+      <input type="text" class="form-control" id="nomeProduto" [(ngModel)]="produto.nome" placeholder="Digite um produto. Ex: 'Café'" name="nomeProduto" required>
+      <input type="number" class="form-control" id="valorProduto" [(ngModel)]="produto.valor" name="valorProduto" required>
+      <input type="number" class="form-control" id="quantidadeProduto" [(ngModel)]="produto.quantidade" name="quantidadeProduto" required>
+      <button type="submit" class="btn btn-primary">Adicionar</button>
+    </div>
+  </form>
+  <table>
+    <thead>
+      <tr>
+        <th>Status Compra</th>
+        <th>Produto</th>
+        <th>Valor</th>
+        <th>Quantidade</th>
+        <th>Subtotal</th>
+        <th>Editar</th>
+        <th>Remover</th>
+      </tr>
+    </thead>
+    <tbody>
+      @if (listaProdutos.length >= 1) {
+        @for(produto of listaProdutos; track produto.id){
+          <tr>
+            <td><input
+              type="checkbox"
+              (click)="riscarProduto(produto)"
+              [checked]="produto.comprado">
+            </td>
+            <td>
+              @if (habilitaEdicao && produto.id === novoProduto.id) {
+                <input type="text" id="novoNomeProduto" [(ngModel)]="novoProduto.nome" name="novoNomeProduto" required>
+              } @else{
+                <span [ngClass]="{'comprado': produto.comprado}">
+                  {{ produto.nome }}
+                </span>
+              }
+            </td>
+            <td>
+              @if (habilitaEdicao && produto.id === novoProduto.id) {
+                <input type="number" id="novoValorProduto" [(ngModel)]="novoProduto.valor" name="novoValorProduto" required>
+              } @else{
+                <span [ngClass]="{'comprado': produto.comprado}">
+                  R$ <span>{{produto.valor}}</span>
+                </span>
+              }
+            </td>
+            <td>
+              @if (habilitaEdicao && produto.id === novoProduto.id) {
+                <input type="number" id="novaQuantidadeProduto" [(ngModel)]="novoProduto.quantidade" name="novaQuantidadeProduto" required>
+              } @else{
+                <span [ngClass]="{'comprado': produto.comprado}">
+                  {{ produto.quantidade }}
+                </span>
+              }
+            </td>
+            <td>
+              <span [ngClass]="{'comprado': produto.comprado}">
+                R$ <span>{{produto.subtotal}}</span>
+              </span>
+            </td>
+            <td>
+              @if(habilitaEdicao && produto.id === novoProduto.id){
+                <button (click)="salvarEdicao(produto)">Salvar</button>
+              } @else {
+                <button (click)="habilitarEdicao(produto)">Editar</button>
+              }
+            </td>
+            <td>
+              <button (click)="removerProduto(produto)">Remover</button>
+            </td>
+          </tr>
+        }
+      } @else {
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>Adicione um produto</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    }
+    </tbody>
+    <tr class="total">
+      <td>Valor Total</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>R$ <span>{{valorTotal}}</span></td>
+      <td></td>
+      <td>
+        @if (listaProdutos.length >= 1) {
+          <button type="button" (click)="limparLista()">Limpar Lista</button>
+        }
+      </td>
+    </tr>
+  </table>
+</div>

@@ -1,1 +1,36 @@
 /* You can add global styles to this file, and also import other style files */
+// Variables for the color palette
+$color-primary: #301466;
+$color-secondary: #5c3d99;
+$color-accent: #38a3a5;
+$color-accent-light: #57cc99;
+$color-accent-lighter: #80ed99;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+// Body styles
+body {
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, $color-primary, $color-secondary, $color-accent);
+  background-size: 400% 400%;
+  animation: gradient-animation 10s ease infinite;
+  font-family: 'Arial', sans-serif;
+}
+
+// Gradient animation
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
