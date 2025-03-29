@@ -1,31 +1,32 @@
-# Simple Sum Calculator
+# Shopping List (Todo list) App in Angular 19,
 
 This is a Shopping List (or to-do list), developed with the intention of practicing my Angular skills.
 
 ### Functional Requirements:
 - Add a product,
 - View the list of products,
-- Cross a product off the list,
+- Mark a product as purchased,
 - Edit or Remove a product,
 - Clear the shopping list.
 
 ### Non-Functional Requirements and Styling:
 - It is not possible to add an empty product,
 - Subtotal and Total Value are calculated automatically,
-- It is possible to cross out items from the shopping list,
+- It is possible to mark items from the shopping list,
 - The main container has a soft Glassmorphism Effect,
-- The table data is highlighted when the mouse passes over it.
+- The table data is are highlighted on hover.
 
 ![screenshot](public/screenshot.png)
 
 ### Skills:
 - Modules export and import
 - Components
-- One way and Two way Databind
+- One way and Two way Data Binding
 - Events
 - Forms
 - Conditional Render (@if / *ngIf)
-- Repetição (@nfFor)
+- Repetition (@for / *ngFor)
+- Filter and Map functions
 - CRUD (Create, Read, Update and Delete)
 - Conditional Styling
 
