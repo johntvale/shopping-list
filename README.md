@@ -1,6 +1,12 @@
 # Shopping List (Todo list) App in Angular 19,
 
-This is a Shopping List (or to-do list), developed with the intention of practicing my Angular skills.
+This is a Shopping List developed with Angular19.
+
+With this app you can create a purchase list, get the total amount of products, and mark items that you already bought.
+
+Its fun, and easy to use.
+
+You can access the app by <a href="https://shopping-list-eight-gamma.vercel.app/"><strong>clicking here</strong></a>.
 
 ### Functional Requirements:
 - Add a product,
