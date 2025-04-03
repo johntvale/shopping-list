@@ -27,7 +27,7 @@ You can access the app by <a href="https://shopping-list-eight-gamma.vercel.app/
 ### Skills:
 - Module export and import
 - Components
-- One-way and Two-way Data Binding
+- One-way and Two-way Data Binding ([] / [()])
 - Events
 - Forms
 - Conditional Render (@if / *ngIf)
@@ -35,6 +35,7 @@ You can access the app by <a href="https://shopping-list-eight-gamma.vercel.app/
 - Filter and Map functions
 - CRUD (Create, Read, Update and Delete)
 - Conditional Styling
+- SCSS
 
 ---
 
