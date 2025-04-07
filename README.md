@@ -1,6 +1,6 @@
 # Shopping List (Todo list) App in Angular 19,
 
-This is a Shopping List developed with Angular19.
+This is a Shopping List developed with Angular 19.
 
 With this app you can create a purchase list, get the total amount of products, and mark items that you already bought.
 
